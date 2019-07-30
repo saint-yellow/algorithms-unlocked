@@ -30,3 +30,13 @@ def sentinel_linear_search(A, n, x):
         return i
     else:
         return None
+
+
+def recursive_linear_search(A, n, i, x):
+    if i > n:
+        return None
+    elif i <= n:
+        if A[i] == x:
+            return i
+        else:
+            return recursive_linear_search(A, n, i+1, x)
